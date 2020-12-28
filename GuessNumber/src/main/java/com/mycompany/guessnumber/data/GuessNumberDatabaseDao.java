@@ -123,7 +123,7 @@ public class GuessNumberDatabaseDao implements GuessNumberDao {
 
     @Override
     public boolean deleteTrialById(int trialId) {
-        final String sql = "DELETE FROM Game WHERE TrialId = ?;";
+        final String sql = "DELETE FROM Trial WHERE TrialId = ?;";
         return jdbcTemplate.update(sql, trialId) > 0;
     }
     

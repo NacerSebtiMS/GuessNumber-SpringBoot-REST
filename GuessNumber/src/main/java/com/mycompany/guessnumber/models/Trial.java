@@ -18,6 +18,10 @@ public class Trial {
     private int partial;
     private String trialDate;
     
+    public boolean equals(Trial other){
+        return this.id == other.getId() && this.gameId == other.getGameId() && this.playerNumber.equals(other.getPlayerNumber()) && this.exact== other.getExact() && this.partial == other.getPartial() && this.trialDate == other.getTrialDate();
+    }
+    
     /**
      * @return the id
      */

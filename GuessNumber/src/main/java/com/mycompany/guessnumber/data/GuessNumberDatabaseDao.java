@@ -117,8 +117,11 @@ public class GuessNumberDatabaseDao implements GuessNumberDao {
 
     @Override
     public boolean deleteGameById(int gameId) {
-        final String sql = "DELETE FROM Game WHERE GameId = ?;";
-        return jdbcTemplate.update(sql, gameId) > 0;
+        final String sql_deleteTrial = "DELETE FROM Trial WHERE GameId = ?;";
+        jdbcTemplate.update(sql_deleteTrial, gameId);
+        
+        final String sql_deleteGame = "DELETE FROM Game WHERE GameId = ?;";
+        return jdbcTemplate.update(sql_deleteGame, gameId) > 0;
     }
 
     @Override

@@ -16,6 +16,10 @@ public class Game {
     private String mysteryNumber;
     private boolean finished;
     
+    public boolean equals(Game other){
+        return this.id == other.getId() && this.mysteryNumber.equals(other.getMysteryNumber()) && this.finished == other.isFinished();
+    }
+    
     /**
      * @return the id
      */

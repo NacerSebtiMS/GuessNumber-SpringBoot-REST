@@ -32,4 +32,10 @@ public interface GuessNumberDao {
     
     // Update game
     boolean updateGame(Game game);
+    
+    // Delete game
+    boolean deleteGameById(int gameId);
+    
+    // Delete trial
+    boolean deleteTrialById(int trialId);
 }

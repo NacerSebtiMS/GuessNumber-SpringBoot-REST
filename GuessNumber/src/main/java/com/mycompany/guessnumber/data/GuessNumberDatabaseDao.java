@@ -114,6 +114,18 @@ public class GuessNumberDatabaseDao implements GuessNumberDao {
                 game.isFinished(),
                 game.getId()) > 0;
     }
+
+    @Override
+    public boolean deleteGameById(int gameId) {
+        final String sql = "DELETE FROM Game WHERE GameId = ?;";
+        return jdbcTemplate.update(sql, gameId) > 0;
+    }
+
+    @Override
+    public boolean deleteTrialById(int trialId) {
+        final String sql = "DELETE FROM Game WHERE TrialId = ?;";
+        return jdbcTemplate.update(sql, trialId) > 0;
+    }
     
     private static final class GameMapper implements RowMapper<Game> {
 

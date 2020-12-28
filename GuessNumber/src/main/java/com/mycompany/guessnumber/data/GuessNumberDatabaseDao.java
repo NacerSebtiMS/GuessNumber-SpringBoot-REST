@@ -132,6 +132,14 @@ public class GuessNumberDatabaseDao implements GuessNumberDao {
         final String sql = "SELECT TrialId, GameId, PlayerNumber, Exact, Partial, TryDate FROM Trial;";
         return jdbcTemplate.query(sql, new TrialMapper());
     }
+
+    @Override
+    public Trial findTrialById(int id) {
+        final String sql = "SELECT TrialId, GameId, PlayerNumber, Exact, Partial, TryDate "
+                + "FROM Trial WHERE TrialId = ? ";
+
+        return jdbcTemplate.queryForObject(sql, new TrialMapper(), id);
+    }
     
     private static final class GameMapper implements RowMapper<Game> {
 

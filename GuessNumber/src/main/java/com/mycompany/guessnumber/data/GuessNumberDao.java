@@ -30,6 +30,9 @@ public interface GuessNumberDao {
     // Get a specific game
     Game findGameById(int id);
     
+    // Get a specific trial
+    Trial findTrialById(int id);
+    
     // Get list of rounds for a game
     List<Trial> findTrialsByGameId(int id);
     

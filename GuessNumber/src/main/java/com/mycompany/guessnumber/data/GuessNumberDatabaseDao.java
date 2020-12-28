@@ -126,6 +126,12 @@ public class GuessNumberDatabaseDao implements GuessNumberDao {
         final String sql = "DELETE FROM Trial WHERE TrialId = ?;";
         return jdbcTemplate.update(sql, trialId) > 0;
     }
+
+    @Override
+    public List<Trial> getAllTrials() {
+        final String sql = "SELECT TrialId, GameId, PlayerNumber, Exact, Partial, TryDate FROM Trial;";
+        return jdbcTemplate.query(sql, new TrialMapper());
+    }
     
     private static final class GameMapper implements RowMapper<Game> {
 

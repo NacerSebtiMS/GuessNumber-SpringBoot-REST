@@ -24,6 +24,9 @@ public interface GuessNumberDao {
     // Get all games
     List<Game> getAllGames();
     
+    // Get all trials
+    List<Trial> getAllTrials();
+    
     // Get a specific game
     Game findGameById(int id);
     

@@ -1,10 +1,11 @@
-com\mycompany\guessnumber\data\GuessNumberDatabaseDao$GameMapper.class
-com\mycompany\guessnumber\data\GuessNumberDatabaseDao$TrialMapper.class
 com\mycompany\guessnumber\data\GuessNumberDao.class
-com\mycompany\guessnumber\service\GuessNumberServiceLayerInterface.class
-com\mycompany\guessnumber\models\Guess.class
 com\mycompany\guessnumber\controllers\GuessNumberController.class
 com\mycompany\guessnumber\models\Trial.class
+com\mycompany\guessnumber\TestApplicationConfiguration.class
+com\mycompany\guessnumber\data\GuessNumberDatabaseDao$GameMapper.class
+com\mycompany\guessnumber\data\GuessNumberDatabaseDao$TrialMapper.class
+com\mycompany\guessnumber\service\GuessNumberServiceLayerInterface.class
+com\mycompany\guessnumber\models\Guess.class
 com\mycompany\guessnumber\service\GuessNumberServiceLayer.class
 com\mycompany\guessnumber\App.class
 com\mycompany\guessnumber\data\GuessNumberDatabaseDao.class
